@@ -1,0 +1,23 @@
+.africa {
+  filter: hue-rotate(45deg);
+}
+
+.asia {
+  filter: hue-rotate(90deg);
+}
+
+.europe {
+  filter: hue-rotate(135deg);
+}
+
+.northAmerica {
+  filter: hue-rotate(180deg);
+}
+
+.southAmerica {
+  filter: hue-rotate(235deg);
+}
+
+.oceania {
+  filter: hue-rotate(270deg);
+}
