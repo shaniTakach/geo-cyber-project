@@ -75,7 +75,11 @@ const icons = {
 const getIconByContinent = (continent: string) =>
   icons[continent as keyof typeof icons] || icons["Africa"]; // Default to Africa if continent is not found
 
-export const Map = () => {
+type MapProps = {
+  title: number;
+};
+
+export const Map = ({ title }: MapProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const map = useRef<L.Map | null>(null);
 
@@ -133,5 +137,11 @@ export const Map = () => {
     };
   }, []);
 
-  return <div ref={ref} id="map" style={{ width: "100vw", height: "100vh" }} />;
+  return (
+    <div
+      ref={ref}
+      id="map"
+      style={{ width: "100vw", height: `calc(100vh - ${title}px)` }}
+    />
+  );
 };
